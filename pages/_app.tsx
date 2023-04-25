@@ -2,6 +2,7 @@ import { CssBaseline, ThemeProvider } from "@mui/material";
 import type { AppProps } from "next/app";
 import Script from "next/script";
 import { useContext, useEffect } from "react";
+import { Client } from 'appwrite';
 import CartProvider, { CartContext } from "../components/CartContext";
 import Footer from "../components/Footer/Footer";
 import Navbar from "../components/Navbar/Navbar";
@@ -9,6 +10,13 @@ import "../styles/global.css";
 import theme from "../styles/theme";
 
 function MyApp({ Component, pageProps }: AppProps) {
+
+  const client = new Client();
+
+  client
+      .setEndpoint('https://8080-appwrite-integrationfor-m3lhdejj8mg.ws-eu95.gitpod.io/v1')
+      .setProject('mtdistributing');
+
   const cart = useContext(CartContext);
 
   useEffect(() => {
