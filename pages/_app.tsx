@@ -10,7 +10,6 @@ import "../styles/global.css";
 import theme from "../styles/theme";
 
 function MyApp({ Component, pageProps }: AppProps) {
-
   const client = new Client();
 
   client

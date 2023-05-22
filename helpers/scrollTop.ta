@@ -1,0 +1,5 @@
+const scrollTop = ():void => {
+  document.getElementById("__next").scrollIntoView({ behavior: "smooth" });
+};
+
+export default scrollTop;
